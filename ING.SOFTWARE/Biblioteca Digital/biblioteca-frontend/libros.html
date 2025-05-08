@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Libros</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Libros</h1>
+        <nav>
+            <a href="index.html">Volver al inicio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Registrar Libro</h2>
+            <form id="formLibro">
+                <input type="text" id="titulo" placeholder="Título" required>
+                <input type="text" id="autor" placeholder="Autor" required>
+                <input type="text" id="isbn" placeholder="ISBN" required>
+                <input type="text" id="editorial" placeholder="Editorial" required>
+                <input type="text" id="genero" placeholder="Género" required>
+                <button type="submit">Guardar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de Libros</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th>Autor</th>
+                        <th>ISBN</th>
+                        <th>Editorial</th>
+                        <th>Categoría</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaLibros">
+                    <!-- Libros serán listados aquí -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Biblioteca Universitaria</p>
+    </footer>
+
+    <script src="js/libros.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Préstamos</title>
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <header>
+    <h1>Gestión de Préstamos</h1>
+    <nav>
+      <a href="index.html">Volver al inicio</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Registrar Préstamo</h2>
+      <form id="formPrestamo">
+        <input type="number" id="usuarioId" placeholder="ID Usuario" required />
+        <input type="number" id="libroId" placeholder="ID Libro" required />
+        <input type="date" id="fechaInicio" required />
+        <input type="date" id="fechaDevolucion" required />
+        <button type="submit">Guardar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Lista de Préstamos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>ID Usuario</th>
+            <th>ID Libro</th>
+            <th>Fecha Préstamo</th>
+            <th>Fecha Devolución</th>
+            <th>Devuelto</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tablaPrestamos"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Biblioteca Universitaria</p>
+  </footer>
+
+  <script src="js/prestamos.js"></script>
+</body>
+</html>
