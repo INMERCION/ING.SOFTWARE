@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Date;
 
 @Service
 public class PrestamoService {
@@ -23,6 +24,10 @@ public class PrestamoService {
     }
 
     public Prestamo save(Prestamo prestamo) {
+        // Si el préstamo está marcado como devuelto, establecemos la fecha de devolución
+        if (prestamo.getDevuelto() && prestamo.getFechaDevolucion() == null) {
+            prestamo.setFechaDevolucion(new Date());
+        }
         return prestamoRepository.save(prestamo);
     }
 
